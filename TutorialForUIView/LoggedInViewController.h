@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
+#import "HomeViewController.h"
 
 @interface LoggedInViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UILabel *WelcomeLabel;
+@property User *loggedInUser;
 - (IBAction)LogOutButton:(id)sender;
 
 @end
