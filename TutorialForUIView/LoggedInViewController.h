@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LoggedInViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *WelcomeLabel;
+- (IBAction)LogOutButton:(id)sender;
 
 @end
