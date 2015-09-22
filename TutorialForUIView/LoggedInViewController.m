@@ -14,22 +14,26 @@
 
 @implementation LoggedInViewController
 
+@synthesize WelcomeLabel, loggedInUser;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    WelcomeLabel.text = [NSString stringWithFormat:@"%@/%@/%@", loggedInUser.FirstName,
+                         loggedInUser.LastName, loggedInUser.Email];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     HomeViewController* vc = [segue destinationViewController];
+    User *user = [[User alloc] init];
+    vc.UserToLogIn = user; //clears logged in user.
 }
-
 
 - (IBAction)LogOutButton:(id)sender {
     [self performSegueWithIdentifier:@"HomeVC" sender:nil];
 }
+
 @end
