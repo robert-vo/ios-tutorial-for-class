@@ -115,7 +115,7 @@
                         <outlet property="ResetButton" destination="evA-Ss-7yM" id="Tmn-t3-0rv"/>
                         <outlet property="SubmitButton" destination="A1S-If-x1H" id="xGo-jr-W1o"/>
                         <outlet property="VerifyPasswordTextField" destination="iij-nZ-PHb" id="uTL-gI-qem"/>
-                        <segue destination="MQR-T2-AuV" kind="showDetail" id="WQ0-8B-hXD"/>
+                        <segue destination="MQR-T2-AuV" kind="showDetail" identifier="LoggedInVC" id="WQ0-8B-hXD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -133,8 +133,27 @@
                     <view key="view" contentMode="scaleToFill" id="AWd-Pt-nBl" customClass="Log">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dq-68-HXc">
+                                <rect key="frame" x="15" y="13" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ev-lH-qBe">
+                                <rect key="frame" x="15" y="42" width="57" height="30"/>
+                                <state key="normal" title="Log out!"/>
+                                <connections>
+                                    <action selector="LogOutButton:" destination="MQR-T2-AuV" eventType="touchUpInside" id="8M3-Zg-xm0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="WelcomeLabel" destination="5dq-68-HXc" id="6ep-ew-ztT"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="HomeVC" id="ruW-VJ-NDl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2jQ-Wq-Fog" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
