@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
 }
 
@@ -31,8 +32,12 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    LoggedInViewController* vc = [segue destinationViewController];
-    vc.loggedInUser = UserToLogIn;
+    if([segue.identifier isEqualToString:@"AuditVC"]) {
+        UITableViewController* vc = [segue destinationViewController];
+    }
+    else {
+        LoggedInViewController* vc = [segue destinationViewController];
+    }
     
 }
 
@@ -44,14 +49,21 @@
     user.LastName = LastNameTextField.text;
     user.Email = EmailTextField.text;
     user.Password = PasswordTextField.text;
+    [user.DateCreated getDateTime];
+    
     NSLog(@"the values are...");
     
     if(user.Email.isValidEmail) {
         NSLog(@"yay email!!");
     }
     UserToLogIn = user;
-    [self performSegueWithIdentifier:@"LoggedInVC" sender:nil];
-
+    
+    if([user.Email  isEqual: @"master"]) {
+        [self performSegueWithIdentifier:@"AuditVC" sender:nil];
+    }
+    else {
+        [self performSegueWithIdentifier:@"LoggedInVC" sender:nil];
+    }
 }
 
 - (IBAction)PasswordTextFieldTouched:(id)sender {

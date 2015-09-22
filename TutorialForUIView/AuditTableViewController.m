@@ -10,4 +10,21 @@
 
 @implementation AuditTableViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+/*
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    HomeViewController* vc = [segue destinationViewController];
+    User *user = [[User alloc] init];
+    vc.UserToLogIn = user; //clears logged in user.
+}
+*/
+
 @end
+
+

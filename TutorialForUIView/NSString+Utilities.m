@@ -23,4 +23,15 @@
         return false;
 }
 
+- (NSString*) getDateTime {
+    NSDateFormatter *formatter;
+    NSString        *dateString;
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd-MM-yyyy HH:mm"];
+    
+    dateString = [formatter stringFromDate:[NSDate date]];    
+    NSLog(@"Current data: %@", dateString);
+    return dateString;
+}
+
 @end

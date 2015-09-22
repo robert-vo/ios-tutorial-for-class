@@ -11,5 +11,6 @@
 @interface NSString (Utilities)
 
 -(BOOL) isValidEmail;
+-(NSString*) getDateTime;
 
 @end

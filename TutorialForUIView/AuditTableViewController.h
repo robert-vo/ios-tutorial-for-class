@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
+#import "HomeViewController.h"
 
 @interface AuditTableViewController : UITableViewController
+
+@property User *loggedInUser;
 
 @end
