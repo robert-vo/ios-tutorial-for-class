@@ -18,6 +18,7 @@
 		E171A5131BB1EE930063C773 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A5121BB1EE930063C773 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E171A5161BB1EEA30063C773 /* LoggedInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A5151BB1EEA30063C773 /* LoggedInViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E171A5191BB1F38D0063C773 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A5181BB1F38D0063C773 /* User.m */; settings = {ASSET_TAGS = (); }; };
+		E171A51C1BB2062A0063C773 /* NSString+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A51B1BB2062A0063C773 /* NSString+Utilities.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		E171A5151BB1EEA30063C773 /* LoggedInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggedInViewController.m; sourceTree = "<group>"; };
 		E171A5171BB1F38D0063C773 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E171A5181BB1F38D0063C773 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E171A51A1BB2062A0063C773 /* NSString+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utilities.h"; sourceTree = "<group>"; };
+		E171A51B1BB2062A0063C773 /* NSString+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utilities.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				E171A4DB1BB1EBE90063C773 /* Supporting Files */,
 				E171A5111BB1EE930063C773 /* HomeViewController.h */,
 				E171A5121BB1EE930063C773 /* HomeViewController.m */,
+				E171A51A1BB2062A0063C773 /* NSString+Utilities.h */,
+				E171A51B1BB2062A0063C773 /* NSString+Utilities.m */,
 				E171A5141BB1EEA30063C773 /* LoggedInViewController.h */,
 				E171A5151BB1EEA30063C773 /* LoggedInViewController.m */,
 			);
@@ -288,6 +293,7 @@
 				E171A5191BB1F38D0063C773 /* User.m in Sources */,
 				E171A5131BB1EE930063C773 /* HomeViewController.m in Sources */,
 				E171A4DD1BB1EBE90063C773 /* main.m in Sources */,
+				E171A51C1BB2062A0063C773 /* NSString+Utilities.m in Sources */,
 				E171A5161BB1EEA30063C773 /* LoggedInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
