@@ -16,12 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *VerifyPasswordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *SubmitButton;
 @property (weak, nonatomic) IBOutlet UIButton *ResetButton;
-- (IBAction)FirstNameFieldTouched:(id)sender;
 - (IBAction)ResetButtonTouched:(id)sender;
-- (IBAction)LastNameFieldTouched:(id)sender;
-- (IBAction)EmailFieldTouched:(id)sender;
-- (IBAction)VerifyPasswordFieldTouched:(id)sender;
-- (IBAction)PasswordFieldTouched:(id)sender;
 - (IBAction)SubmitButtonTouched:(id)sender;
 
 @end

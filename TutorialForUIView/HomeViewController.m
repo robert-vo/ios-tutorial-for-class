@@ -36,27 +36,6 @@
 }
 
 
-- (IBAction)FirstNameFieldTouched:(id)sender {
-    FirstNameTextField.text = @"";
-}
-
-
-- (IBAction)LastNameFieldTouched:(id)sender {
-    LastNameTextField.text = @"";
-}
-
-- (IBAction)EmailFieldTouched:(id)sender {
-    EmailTextField.text = @"";
-}
-
-- (IBAction)VerifyPasswordFieldTouched:(id)sender {
-    VerifyPasswordTextField.text = @"";
-}
-
-- (IBAction)PasswordFieldTouched:(id)sender {
-    PasswordTextField.text = @"";
-}
-
 - (IBAction)SubmitButtonTouched:(id)sender {
     //TODO - Validate User Fields.
     User *user = [[User alloc] init];
