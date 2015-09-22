@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "User.h"
+#import "NSString+Utilities.h"
 
 @interface HomeViewController ()
 
@@ -44,6 +45,10 @@
     user.Email = EmailTextField.text;
     user.Password = PasswordTextField.text;
     NSLog(@"the values are...");
+    
+    if(user.Email.isValidEmail) {
+        NSLog(@"yay email!!");
+    }
     
     [self performSegueWithIdentifier:@"LoggedInVC" sender:nil];
 
