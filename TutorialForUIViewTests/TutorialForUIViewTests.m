@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "NSString+Utilities.h"
 
 @interface TutorialForUIViewTests : XCTestCase
 
@@ -34,6 +35,21 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+
+- (void)canaryTest {
+    XCTAssertTrue(true);
+}
+
+- (void)testValidEmail {
+    NSString *emailToVerify = @"robert@robert.com";
+    XCTAssertTrue(emailToVerify.isValidEmail);
+}
+
+- (void)testInvalidEmail {
+    NSString *invalidEmail = @"1234";
+    XCTAssertTrue(invalidEmail.isValidEmail);
 }
 
 @end
