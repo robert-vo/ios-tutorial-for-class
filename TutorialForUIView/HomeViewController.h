@@ -20,5 +20,7 @@
 @property User *UserToLogIn;
 - (IBAction)ResetButtonTouched:(id)sender;
 - (IBAction)SubmitButtonTouched:(id)sender;
+- (IBAction)PasswordTextFieldTouched:(id)sender;
+- (IBAction)VerifyPasswordTextFieldTouched:(id)sender;
 
 @end

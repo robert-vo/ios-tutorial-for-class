@@ -54,8 +54,18 @@
 
 }
 
+- (IBAction)PasswordTextFieldTouched:(id)sender {
+    [PasswordTextField setSecureTextEntry:YES];
+    //PasswordTextField.text = @"";
+}
+
+- (IBAction)VerifyPasswordTextFieldTouched:(id)sender {
+    [VerifyPasswordTextField setSecureTextEntry:YES];
+    //VerifyPasswordTextField.text = @"";
+
+}
+
 - (IBAction)ResetButtonTouched:(id)sender {
-    //TODO - Validate if not default fields.
     FirstNameTextField.text = @"";
     LastNameTextField.text = @"";
     EmailTextField.text = @"";
