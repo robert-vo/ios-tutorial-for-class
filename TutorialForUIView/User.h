@@ -14,5 +14,6 @@
 @property NSString *LastName;
 @property NSString *Email;
 @property NSString *Password;
+@property NSString *DateCreated;
 
 @end
