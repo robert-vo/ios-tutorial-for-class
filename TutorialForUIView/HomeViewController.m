@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "User.h"
 #import "NSString+Utilities.h"
+#import "LoggedInViewController.h"
 
 @interface HomeViewController ()
 
@@ -16,7 +17,7 @@
 
 @implementation HomeViewController
 
-@synthesize FirstNameTextField, LastNameTextField, EmailTextField, PasswordTextField, VerifyPasswordTextField;
+@synthesize FirstNameTextField, LastNameTextField, EmailTextField, PasswordTextField, VerifyPasswordTextField, UserToLogIn;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,10 +31,9 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    HomeViewController* vc = [segue destinationViewController];
-    //vc.EmailTextField.text = EmailTextField.text;
+    LoggedInViewController* vc = [segue destinationViewController];
+    vc.loggedInUser = UserToLogIn;
     
-    //vc.bookData = selectedBook;
 }
 
 
@@ -49,7 +49,7 @@
     if(user.Email.isValidEmail) {
         NSLog(@"yay email!!");
     }
-    
+    UserToLogIn = user;
     [self performSegueWithIdentifier:@"LoggedInVC" sender:nil];
 
 }

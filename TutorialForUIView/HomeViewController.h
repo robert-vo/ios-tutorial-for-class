@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface HomeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *FirstNameTextField;
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *VerifyPasswordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *SubmitButton;
 @property (weak, nonatomic) IBOutlet UIButton *ResetButton;
+@property User *UserToLogIn;
 - (IBAction)ResetButtonTouched:(id)sender;
 - (IBAction)SubmitButtonTouched:(id)sender;
 
