@@ -25,7 +25,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    LoggedInViewController* vc = [segue destinationViewController];
+    HomeViewController* vc = [segue destinationViewController];
 }
 
 
