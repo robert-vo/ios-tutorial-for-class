@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		E171A4DD1BB1EBE90063C773 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A4DC1BB1EBE90063C773 /* main.m */; };
 		E171A4E01BB1EBE90063C773 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A4DF1BB1EBE90063C773 /* AppDelegate.m */; };
-		E171A4E31BB1EBE90063C773 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A4E21BB1EBE90063C773 /* ViewController.m */; };
 		E171A4E61BB1EBE90063C773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E171A4E41BB1EBE90063C773 /* Main.storyboard */; };
 		E171A4E91BB1EBE90063C773 /* TutorialForUIView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E171A4E71BB1EBE90063C773 /* TutorialForUIView.xcdatamodeld */; };
 		E171A4EB1BB1EBE90063C773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E171A4EA1BB1EBE90063C773 /* Assets.xcassets */; };
 		E171A4EE1BB1EBE90063C773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E171A4EC1BB1EBE90063C773 /* LaunchScreen.storyboard */; };
 		E171A4F91BB1EBE90063C773 /* TutorialForUIViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A4F81BB1EBE90063C773 /* TutorialForUIViewTests.m */; };
 		E171A5041BB1EBE90063C773 /* TutorialForUIViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A5031BB1EBE90063C773 /* TutorialForUIViewUITests.m */; };
+		E171A5131BB1EE930063C773 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A5121BB1EE930063C773 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E171A5161BB1EEA30063C773 /* LoggedInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A5151BB1EEA30063C773 /* LoggedInViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +41,6 @@
 		E171A4DC1BB1EBE90063C773 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E171A4DE1BB1EBE90063C773 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E171A4DF1BB1EBE90063C773 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E171A4E11BB1EBE90063C773 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E171A4E21BB1EBE90063C773 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E171A4E51BB1EBE90063C773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E171A4E81BB1EBE90063C773 /* TutorialForUIView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TutorialForUIView.xcdatamodel; sourceTree = "<group>"; };
 		E171A4EA1BB1EBE90063C773 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +52,10 @@
 		E171A4FF1BB1EBE90063C773 /* TutorialForUIViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutorialForUIViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E171A5031BB1EBE90063C773 /* TutorialForUIViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TutorialForUIViewUITests.m; sourceTree = "<group>"; };
 		E171A5051BB1EBE90063C773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E171A5111BB1EE930063C773 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		E171A5121BB1EE930063C773 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		E171A5141BB1EEA30063C773 /* LoggedInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggedInViewController.h; sourceTree = "<group>"; };
+		E171A5151BB1EEA30063C773 /* LoggedInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggedInViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,14 +108,16 @@
 			children = (
 				E171A4DE1BB1EBE90063C773 /* AppDelegate.h */,
 				E171A4DF1BB1EBE90063C773 /* AppDelegate.m */,
-				E171A4E11BB1EBE90063C773 /* ViewController.h */,
-				E171A4E21BB1EBE90063C773 /* ViewController.m */,
 				E171A4E41BB1EBE90063C773 /* Main.storyboard */,
 				E171A4EA1BB1EBE90063C773 /* Assets.xcassets */,
 				E171A4EC1BB1EBE90063C773 /* LaunchScreen.storyboard */,
 				E171A4EF1BB1EBE90063C773 /* Info.plist */,
 				E171A4E71BB1EBE90063C773 /* TutorialForUIView.xcdatamodeld */,
 				E171A4DB1BB1EBE90063C773 /* Supporting Files */,
+				E171A5111BB1EE930063C773 /* HomeViewController.h */,
+				E171A5121BB1EE930063C773 /* HomeViewController.m */,
+				E171A5141BB1EEA30063C773 /* LoggedInViewController.h */,
+				E171A5151BB1EEA30063C773 /* LoggedInViewController.m */,
 			);
 			path = TutorialForUIView;
 			sourceTree = "<group>";
@@ -273,10 +278,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E171A4E31BB1EBE90063C773 /* ViewController.m in Sources */,
 				E171A4E01BB1EBE90063C773 /* AppDelegate.m in Sources */,
 				E171A4E91BB1EBE90063C773 /* TutorialForUIView.xcdatamodeld in Sources */,
+				E171A5131BB1EE930063C773 /* HomeViewController.m in Sources */,
 				E171A4DD1BB1EBE90063C773 /* main.m in Sources */,
+				E171A5161BB1EEA30063C773 /* LoggedInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
