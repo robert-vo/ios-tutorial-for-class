@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Second Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZZ-A1-b6e">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZZ-A1-b6e">
                                 <rect key="frame" x="237" y="118" width="112" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -31,6 +31,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="160" y="158" width="97" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="FirstNameFieldTouched:" destination="BYZ-38-t0r" eventType="touchDown" id="3Eu-zd-YxF"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f3N-ev-U5u">
                                 <rect key="frame" x="252" y="182" width="97" height="30"/>
@@ -65,10 +68,36 @@
                                     <rect key="frame" x="133" y="98" width="136" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evA-Ss-7yM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Reset All Fields"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="142" y="428" width="105" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="ResetButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ef-E3-5vm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="evA-Ss-7yM"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="evA-Ss-7yM"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="EmailTextField" destination="f3N-ev-U5u" id="4hA-wm-4Y3"/>
+                        <outlet property="FirstNameTextField" destination="44o-yv-lIb" id="HTS-Fd-CXV"/>
+                        <outlet property="LastNameTextField" destination="tZZ-A1-b6e" id="NTP-La-7Go"/>
+                        <outlet property="PasswordTextField" destination="DXj-cn-gU0" id="Jxr-IA-Zw0"/>
+                        <outlet property="ResetButton" destination="evA-Ss-7yM" id="Tmn-t3-0rv"/>
+                        <outlet property="VerifyPasswordTextField" destination="iij-nZ-PHb" id="uTL-gI-qem"/>
                         <segue destination="MQR-T2-AuV" kind="showDetail" id="WQ0-8B-hXD"/>
                     </connections>
                 </viewController>

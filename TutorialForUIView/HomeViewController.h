@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *FirstNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *LastNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *EmailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *PasswordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *VerifyPasswordTextField;
+- (IBAction)FirstNameFieldTouched:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *ResetButton;
+- (IBAction)ResetButtonTouched:(id)sender;
 
 @end

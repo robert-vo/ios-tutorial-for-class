@@ -14,6 +14,8 @@
 
 @implementation HomeViewController
 
+@synthesize FirstNameTextField, LastNameTextField, EmailTextField, PasswordTextField, VerifyPasswordTextField;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -34,4 +36,16 @@
 }
 */
 
+- (IBAction)FirstNameFieldTouched:(id)sender {
+    FirstNameTextField.text = @"";
+    
+}
+
+- (IBAction)ResetButtonTouched:(id)sender {
+    FirstNameTextField.text = @"";
+    LastNameTextField.text = @"";
+    EmailTextField.text = @"";
+    VerifyPasswordTextField.text = @"";
+    PasswordTextField.text = @"";
+}
 @end
