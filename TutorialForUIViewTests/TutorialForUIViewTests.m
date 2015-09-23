@@ -49,7 +49,7 @@
 
 - (void)testInvalidEmail {
     NSString *invalidEmail = @"1234";
-    XCTAssertTrue(invalidEmail.isValidEmail);
+    XCTAssertFalse(invalidEmail.isValidEmail);
 }
 
 @end
