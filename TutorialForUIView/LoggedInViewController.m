@@ -14,12 +14,19 @@
 
 @implementation LoggedInViewController
 
-@synthesize WelcomeLabel, loggedInUser;
+@synthesize WelcomeLabel, loggedInUser, FirstNameLabel, LastNameLabel, EmailLabel, PasswordLabel, DateCreatedLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     WelcomeLabel.text = [NSString stringWithFormat:@"%@/%@/%@", loggedInUser.FirstName,
                          loggedInUser.LastName, loggedInUser.Email];
+    
+    
+    FirstNameLabel.text = loggedInUser.FirstName;
+    LastNameLabel.text = loggedInUser.LastName;
+    EmailLabel.text = loggedInUser.Email;
+    PasswordLabel.text = loggedInUser.Password;
+    DateCreatedLabel.text = loggedInUser.DateCreated;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,11 +36,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     HomeViewController* vc = [segue destinationViewController];
     User *user = [[User alloc] init];
-    vc.UserToLogIn = user; //clears logged in user.
+    vc.userToPass = user; //clears logged in user.
 }
 
 - (IBAction)LogOutButton:(id)sender {
-    [self performSegueWithIdentifier:@"HomeVC" sender:nil];
+    [self performSegueWithIdentifier:@"homeVC" sender:nil];
 }
 
 @end

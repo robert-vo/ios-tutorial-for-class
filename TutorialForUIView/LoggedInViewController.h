@@ -14,6 +14,11 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *WelcomeLabel;
 @property User *loggedInUser;
+@property (weak, nonatomic) IBOutlet UILabel *FirstNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *LastNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *EmailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *PasswordLabel;
+@property (weak, nonatomic) IBOutlet UILabel *DateCreatedLabel;
 - (IBAction)LogOutButton:(id)sender;
 
 @end
