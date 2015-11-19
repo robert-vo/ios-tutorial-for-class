@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UITextField *EmailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *PasswordTextField;
 - (IBAction)LoginButton:(id)sender;
