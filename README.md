@@ -1,3 +1,3 @@
-# ios-tutorial-for-class
+# Login Screen Example
 
-This is a sample project that utilizes NSUserDefaults and shows simple view navigation. 
+This is an example login and registration app that utilizes NSUserDefaults to save and lookup registered user's data.
