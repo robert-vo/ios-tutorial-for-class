@@ -41,7 +41,6 @@
     
 }
 
-/*
 
 - (NSArray*) retrieveDataFromNSUserDefaults {
     NSMutableArray *objectArray = [NSMutableArray new];
@@ -57,6 +56,7 @@
     }
     return objectArray;
 }
+
 - (void)storeDataInNSUserDefaults:(User *)userToStore {
     NSMutableArray *objectArray = [NSMutableArray arrayWithArray:[self
                                                                   retrieveDataFromNSUserDefaults]];
@@ -66,8 +66,6 @@
                                                       archivedDataWithRootObject:objectArray] forKey:@"savedArray"];
     
 }
-
-*/
 
 
 - (IBAction)SubmitButtonTouched:(id)sender {
@@ -86,23 +84,12 @@
     }
     UserToLogIn = user;
     
-    if([user.Email  isEqual: @"master"]) {
+    if([user.Email isEqual: @"master"]) {
         [self performSegueWithIdentifier:@"AuditVC" sender:nil];
     }
     else {
         [self performSegueWithIdentifier:@"LoggedInVC" sender:nil];
     }
-}
-
-- (IBAction)PasswordTextFieldTouched:(id)sender {
-    [PasswordTextField setSecureTextEntry:YES];
-    //PasswordTextField.text = @"";
-}
-
-- (IBAction)VerifyPasswordTextFieldTouched:(id)sender {
-    [VerifyPasswordTextField setSecureTextEntry:YES];
-    //VerifyPasswordTextField.text = @"";
-
 }
 
 - (IBAction)ResetButtonTouched:(id)sender {
