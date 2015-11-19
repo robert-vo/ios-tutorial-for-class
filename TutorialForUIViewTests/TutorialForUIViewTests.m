@@ -7,7 +7,6 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "Car.h"
 #import "NSString+Utilities.h"
 
 
@@ -39,11 +38,18 @@
     }];
 }
 
-
 - (void)canaryTest {
     XCTAssertTrue(true);
 }
 
+- (void)testValidEmail {
+        NSString *emailToVerify = @"robert@robert.com";
+        XCTAssertTrue(emailToVerify.isValidEmail);
+}
 
+- (void)testInvalidEmail {
+        NSString *invalidEmail = @"1234";
+        XCTAssertFalse(invalidEmail.isValidEmail);
+}
 
 @end
