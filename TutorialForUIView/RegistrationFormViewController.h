@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 
-@interface HomeViewController : UIViewController
+@interface RegistrationFormViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *FirstNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *LastNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *EmailTextField;

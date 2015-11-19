@@ -6,16 +6,16 @@
 //  Copyright © 2015 RobertVo. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "RegistrationFormViewController.h"
 #import "User.h"
 #import "NSString+Utilities.h"
 #import "LoggedInViewController.h"
 
-@interface HomeViewController ()
+@interface RegistrationFormViewController ()
 
 @end
 
-@implementation HomeViewController
+@implementation RegistrationFormViewController
 
 @synthesize FirstNameTextField, LastNameTextField, EmailTextField, PasswordTextField, VerifyPasswordTextField, UserToLogIn;
 
@@ -64,7 +64,6 @@
     
     [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver
                                                       archivedDataWithRootObject:objectArray] forKey:@"savedArray"];
-    
 }
 
 

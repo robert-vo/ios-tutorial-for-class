@@ -15,11 +15,11 @@
 		E171A4EE1BB1EBE90063C773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E171A4EC1BB1EBE90063C773 /* LaunchScreen.storyboard */; };
 		E171A4F91BB1EBE90063C773 /* TutorialForUIViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A4F81BB1EBE90063C773 /* TutorialForUIViewTests.m */; };
 		E171A5041BB1EBE90063C773 /* TutorialForUIViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A5031BB1EBE90063C773 /* TutorialForUIViewUITests.m */; };
-		E171A5131BB1EE930063C773 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A5121BB1EE930063C773 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E171A5161BB1EEA30063C773 /* LoggedInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A5151BB1EEA30063C773 /* LoggedInViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E171A5191BB1F38D0063C773 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A5181BB1F38D0063C773 /* User.m */; settings = {ASSET_TAGS = (); }; };
-		E171A51C1BB2062A0063C773 /* NSString+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A51B1BB2062A0063C773 /* NSString+Utilities.m */; settings = {ASSET_TAGS = (); }; };
-		E17DDEE21BB21AA00090686D /* AuditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17DDEE11BB21AA00090686D /* AuditTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E171A5131BB1EE930063C773 /* RegistrationFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A5121BB1EE930063C773 /* RegistrationFormViewController.m */; };
+		E171A5161BB1EEA30063C773 /* LoggedInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A5151BB1EEA30063C773 /* LoggedInViewController.m */; };
+		E171A5191BB1F38D0063C773 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A5181BB1F38D0063C773 /* User.m */; };
+		E171A51C1BB2062A0063C773 /* NSString+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A51B1BB2062A0063C773 /* NSString+Utilities.m */; };
+		E17DDEE21BB21AA00090686D /* AuditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17DDEE11BB21AA00090686D /* AuditTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,8 @@
 		E171A4FF1BB1EBE90063C773 /* TutorialForUIViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutorialForUIViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E171A5031BB1EBE90063C773 /* TutorialForUIViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TutorialForUIViewUITests.m; sourceTree = "<group>"; };
 		E171A5051BB1EBE90063C773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E171A5111BB1EE930063C773 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		E171A5121BB1EE930063C773 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		E171A5111BB1EE930063C773 /* RegistrationFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationFormViewController.h; sourceTree = "<group>"; };
+		E171A5121BB1EE930063C773 /* RegistrationFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationFormViewController.m; sourceTree = "<group>"; };
 		E171A5141BB1EEA30063C773 /* LoggedInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggedInViewController.h; sourceTree = "<group>"; };
 		E171A5151BB1EEA30063C773 /* LoggedInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggedInViewController.m; sourceTree = "<group>"; };
 		E171A5171BB1F38D0063C773 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -127,8 +127,8 @@
 				E171A4EF1BB1EBE90063C773 /* Info.plist */,
 				E171A4E71BB1EBE90063C773 /* TutorialForUIView.xcdatamodeld */,
 				E171A4DB1BB1EBE90063C773 /* Supporting Files */,
-				E171A5111BB1EE930063C773 /* HomeViewController.h */,
-				E171A5121BB1EE930063C773 /* HomeViewController.m */,
+				E171A5111BB1EE930063C773 /* RegistrationFormViewController.h */,
+				E171A5121BB1EE930063C773 /* RegistrationFormViewController.m */,
 				E171A51A1BB2062A0063C773 /* NSString+Utilities.h */,
 				E171A51B1BB2062A0063C773 /* NSString+Utilities.m */,
 				E171A5141BB1EEA30063C773 /* LoggedInViewController.h */,
@@ -297,7 +297,7 @@
 				E171A4E91BB1EBE90063C773 /* TutorialForUIView.xcdatamodeld in Sources */,
 				E171A5191BB1F38D0063C773 /* User.m in Sources */,
 				E17DDEE21BB21AA00090686D /* AuditTableViewController.m in Sources */,
-				E171A5131BB1EE930063C773 /* HomeViewController.m in Sources */,
+				E171A5131BB1EE930063C773 /* RegistrationFormViewController.m in Sources */,
 				E171A4DD1BB1EBE90063C773 /* main.m in Sources */,
 				E171A51C1BB2062A0063C773 /* NSString+Utilities.m in Sources */,
 				E171A5161BB1EEA30063C773 /* LoggedInViewController.m in Sources */,
