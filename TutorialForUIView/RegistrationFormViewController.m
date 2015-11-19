@@ -36,11 +36,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-}
-
 - (void)storeDataInNSUserDefaults:(User *)userToStore {
     NSMutableArray *objectArray = [NSMutableArray arrayWithArray:[NSArray
                                                                   retrieveDataFromNSUserDefaults]];
@@ -63,7 +58,7 @@
         [self performSegueWithIdentifier:@"homeVC" sender:self];
     }
     else {
-        //Invalid form.
+        [self displayInvalidForm];
     }
 }
 
@@ -79,6 +74,22 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void) displayInvalidForm {
+    UIAlertController *alert = [UIAlertController
+                                alertControllerWithTitle:@"Invalid form!"
+                                message:@"Invalid email or the passwords don't match. Try again! 😊"
+                                preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okayButton = [UIAlertAction
+                                 actionWithTitle:@"Okay 🙃"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action)
+                                 {
+                                     [alert dismissViewControllerAnimated:YES completion:nil];
+                                 }];
+    [alert addAction:okayButton];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 
 @end

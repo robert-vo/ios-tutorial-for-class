@@ -22,5 +22,6 @@
 - (IBAction)ResetButtonTouched:(id)sender;
 - (IBAction)SubmitButtonTouched:(id)sender;
 - (IBAction)BackButtonTouched:(id)sender;
+- (void) displayInvalidForm;
 
 @end
