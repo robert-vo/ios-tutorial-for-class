@@ -10,6 +10,7 @@
 #import "User.h"
 
 @interface RegistrationFormViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UITextField *FirstNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *LastNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *EmailTextField;
@@ -17,10 +18,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *VerifyPasswordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *SubmitButton;
 @property (weak, nonatomic) IBOutlet UIButton *ResetButton;
-@property User *UserToLogIn;
+@property User *userToAdd;
 - (IBAction)ResetButtonTouched:(id)sender;
 - (IBAction)SubmitButtonTouched:(id)sender;
-- (IBAction)PasswordTextFieldTouched:(id)sender;
-- (IBAction)VerifyPasswordTextFieldTouched:(id)sender;
+- (IBAction)BackButtonTouched:(id)sender;
 
 @end
