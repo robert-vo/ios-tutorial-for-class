@@ -18,10 +18,12 @@
 
 @implementation HomeViewController
 
-@synthesize PasswordTextField, EmailTextField;
+@synthesize PasswordTextField, EmailTextField, userToPass;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    EmailTextField.text = @"email@email.com";
+    PasswordTextField.text = @"123";
     // Do any additional setup after loading the view.
 }
 
@@ -32,18 +34,41 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if ([[segue identifier] isEqualToString:@"LoggedInVC"]) {
+        LoggedInViewController *vc = [segue destinationViewController];
+        vc.loggedInUser = userToPass;
+    }
 }
 
 
 - (IBAction)LoginButton:(id)sender {
     NSArray *dataFromUserDefaults = [NSArray retrieveDataFromNSUserDefaults];
     for(User *user in dataFromUserDefaults) {
-        if(EmailTextField.text == user.Email && PasswordTextField.text == user.Password) {
+        if([EmailTextField.text isEqualToString:user.Email] && [PasswordTextField.text isEqualToString:user.Password] ) {
+            userToPass = user;
             [self performSegueWithIdentifier:@"LoggedInVC" sender:self];
         }
     }
-    NSLog(@"outside for loop");
+    [self displayUserNotFound];
 }
+
+- (void) displayUserNotFound {
+    UIAlertController *alert = [UIAlertController
+                                alertControllerWithTitle:@"User not found!"
+                                message:@"Hey there! We couldn't find your email/password. Try again!"
+                                preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okayButton = [UIAlertAction
+                                 actionWithTitle:@"Okay 🙃"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action)
+                                 {
+                                     [alert dismissViewControllerAnimated:YES completion:nil];
+                                 }];
+    [alert addAction:okayButton];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 @end
+
