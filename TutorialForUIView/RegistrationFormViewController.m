@@ -9,6 +9,7 @@
 #import "RegistrationFormViewController.h"
 #import "User.h"
 #import "NSString+Utilities.h"
+#import "NSArray+Utilities.h"
 #import "LoggedInViewController.h"
 
 @interface RegistrationFormViewController ()
@@ -32,33 +33,11 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"AuditVC"]) {
-        UITableViewController* vc = [segue destinationViewController];
-    }
-    else {
-        LoggedInViewController* vc = [segue destinationViewController];
-    }
     
 }
 
-
-- (NSArray*) retrieveDataFromNSUserDefaults {
-    NSMutableArray *objectArray = [NSMutableArray new];
-    NSUserDefaults *currentDefaults = [NSUserDefaults standardUserDefaults];
-    NSData *dataRepresentingSavedArray = [currentDefaults objectForKey:@"savedArray"];
-    if (dataRepresentingSavedArray != nil)
-    {
-        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData: dataRepresentingSavedArray];
-        if (oldSavedArray != nil)
-            objectArray = [[NSMutableArray alloc] initWithArray:oldSavedArray];
-        else
-            objectArray = [[NSMutableArray alloc] init];
-    }
-    return objectArray;
-}
-
 - (void)storeDataInNSUserDefaults:(User *)userToStore {
-    NSMutableArray *objectArray = [NSMutableArray arrayWithArray:[self
+    NSMutableArray *objectArray = [NSMutableArray arrayWithArray:[NSArray
                                                                   retrieveDataFromNSUserDefaults]];
     [objectArray addObject:userToStore];
     
@@ -68,26 +47,18 @@
 
 
 - (IBAction)SubmitButtonTouched:(id)sender {
-    //TODO - Validate User Fields.
-    User *user = [[User alloc] init];
-    user.FirstName = FirstNameTextField.text;
-    user.LastName = LastNameTextField.text;
-    user.Email = EmailTextField.text;
-    user.Password = PasswordTextField.text;
-    [user.DateCreated getDateTime];
-    
-    NSLog(@"the values are...");
-    
-    if(user.Email.isValidEmail) {
-        NSLog(@"yay email!!");
-    }
-    UserToLogIn = user;
-    
-    if([user.Email isEqual: @"master"]) {
-        [self performSegueWithIdentifier:@"AuditVC" sender:nil];
+    if([EmailTextField.text isValidEmail] && PasswordTextField.text == VerifyPasswordTextField.text) {
+        User *newUser = [[User alloc] init];
+        newUser.FirstName = FirstNameTextField.text;
+        newUser.LastName = LastNameTextField.text;
+        newUser.Email = EmailTextField.text;
+        newUser.Password = PasswordTextField.text;
+        [newUser.DateCreated getDateTime];
+        [self storeDataInNSUserDefaults:newUser];
+        [self performSegueWithIdentifier:@"homeVC" sender:self];
     }
     else {
-        [self performSegueWithIdentifier:@"LoggedInVC" sender:nil];
+        //Invalid form.
     }
 }
 
