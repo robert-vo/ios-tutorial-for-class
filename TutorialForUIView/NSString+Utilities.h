@@ -10,7 +10,7 @@
 
 @interface NSString (Utilities)
 
--(BOOL) isValidYear:(NSString*)year;
--(BOOL) isValidVin:(NSString*)vin;
+-(BOOL) isValidEmail;
+-(NSString*) getDateTime;
 
 @end
