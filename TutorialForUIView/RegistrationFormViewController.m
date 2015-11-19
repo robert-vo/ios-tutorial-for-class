@@ -18,9 +18,14 @@
 
 @implementation RegistrationFormViewController
 
-@synthesize FirstNameTextField, LastNameTextField, EmailTextField, PasswordTextField, VerifyPasswordTextField, UserToLogIn;
+@synthesize FirstNameTextField, LastNameTextField, EmailTextField, PasswordTextField, VerifyPasswordTextField, userToAdd;
 
 - (void)viewDidLoad {
+    FirstNameTextField.text = @"robert";
+    LastNameTextField.text = @"lastname";
+    EmailTextField.text = @"email@email.com";
+    PasswordTextField.text = @"123";
+    VerifyPasswordTextField.text = @"123";
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
@@ -69,5 +74,11 @@
     VerifyPasswordTextField.text = @"";
     PasswordTextField.text = @"";
 }
+
+- (IBAction)BackButtonTouched:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 @end
