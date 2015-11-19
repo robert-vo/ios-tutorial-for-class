@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject
+@interface User : NSObject <NSCoding>
 
 @property NSString *FirstName;
 @property NSString *LastName;
