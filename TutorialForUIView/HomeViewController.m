@@ -10,6 +10,7 @@
 #import "NSArray+Utilities.h"
 #import "NSString+Utilities.h"
 #import "LoggedInViewController.h"
+#import "User.h"
 
 @interface HomeViewController ()
 
@@ -38,6 +39,11 @@
 
 - (IBAction)LoginButton:(id)sender {
     NSArray *dataFromUserDefaults = [NSArray retrieveDataFromNSUserDefaults];
-    
+    for(User *user in dataFromUserDefaults) {
+        if(EmailTextField.text == user.Email && PasswordTextField.text == user.Password) {
+            [self performSegueWithIdentifier:@"LoggedInVC" sender:self];
+        }
+    }
+    NSLog(@"outside for loop");
 }
 @end
