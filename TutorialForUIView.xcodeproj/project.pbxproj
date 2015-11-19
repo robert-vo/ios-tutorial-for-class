@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E11FACCF1BFDDC6A00DFAADB /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11FACCE1BFDDC6A00DFAADB /* HomeViewController.m */; };
 		E171A4DD1BB1EBE90063C773 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A4DC1BB1EBE90063C773 /* main.m */; };
 		E171A4E01BB1EBE90063C773 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E171A4DF1BB1EBE90063C773 /* AppDelegate.m */; };
 		E171A4E61BB1EBE90063C773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E171A4E41BB1EBE90063C773 /* Main.storyboard */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E11FACCD1BFDDC6A00DFAADB /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		E11FACCE1BFDDC6A00DFAADB /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E171A4D81BB1EBE90063C773 /* TutorialForUIView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutorialForUIView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E171A4DC1BB1EBE90063C773 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E171A4DE1BB1EBE90063C773 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				E171A4DE1BB1EBE90063C773 /* AppDelegate.h */,
 				E171A4DF1BB1EBE90063C773 /* AppDelegate.m */,
 				E171A4E41BB1EBE90063C773 /* Main.storyboard */,
+				E11FACCD1BFDDC6A00DFAADB /* HomeViewController.h */,
+				E11FACCE1BFDDC6A00DFAADB /* HomeViewController.m */,
 				E17DDEE01BB21AA00090686D /* AuditTableViewController.h */,
 				E17DDEE11BB21AA00090686D /* AuditTableViewController.m */,
 				E171A5171BB1F38D0063C773 /* User.h */,
@@ -298,6 +303,7 @@
 				E171A5191BB1F38D0063C773 /* User.m in Sources */,
 				E17DDEE21BB21AA00090686D /* AuditTableViewController.m in Sources */,
 				E171A5131BB1EE930063C773 /* RegistrationFormViewController.m in Sources */,
+				E11FACCF1BFDDC6A00DFAADB /* HomeViewController.m in Sources */,
 				E171A4DD1BB1EBE90063C773 /* main.m in Sources */,
 				E171A51C1BB2062A0063C773 /* NSString+Utilities.m in Sources */,
 				E171A5161BB1EEA30063C773 /* LoggedInViewController.m in Sources */,
